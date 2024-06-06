@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>It`s a vetch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+</head>
+
+<body>
+    <div class="title_box">
+        <header>
+            <h1>Check if it`s vetch!</h1>
+            <p>Please enter the names of three vegetables to see if they go well together.</p>
+        </header>
+    </div>
+    <main>
+        <div class="veg_input_form">
+            <form method="post"  action = "" enctype="multipart/form-data" accept=".txt">
+                <div class = "text_input">Vegetable 1: <input type="text" name = "txt_file1" enctype="multipart/form-data" class="input_field"></div>
+                <br>
+                <div class = "text_input">Vegetable 2: <input type="text" name = "txt_file2" enctype="multipart/form-data"class="input_field"></div>
+                <br>
+                <div class = "text_input">Vegetable 3: <input type="text" name = "txt_file3" enctype="multipart/form-data"class="input_field"></div>
+                <br>
+                <div class = "submit_button"><button type="submit">Check</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+

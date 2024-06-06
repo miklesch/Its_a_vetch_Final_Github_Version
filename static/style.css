@@ -1,0 +1,105 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(static/fontawesome-webfont.ttf);
+}
+
+
+html {
+    background-image: url("/static/vegetables.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 100%;
+    padding: 5%;
+    background-color: rgb(235, 231, 231);
+}
+
+.title_box {
+   
+    position: fixed;
+}
+
+header {
+    opacity: 1;
+    border: 2px solid rgba(83, 74, 74, 0.659);
+    border-radius: 10px;
+    position: fixed;
+    top: 5%;
+    background-color: antiquewhite;
+    opacity: 0.8;
+    color: rgb(117, 23, 23);
+    margin-right: 20px;
+    
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+p {
+    margin: 20px
+}
+
+
+.veg_input_form {
+    position: fixed;
+    top: 57%;
+    text-align: right;
+   
+}
+
+.text_input {
+    background-color: antiquewhite;
+    color: rgb(117, 23, 23);
+    border-radius: 10px;
+    border: 2px solid rgba(83, 74, 74, 0.659);
+    opacity: 0.8;
+    text-indent: 20px;
+    margin-right: 20px;
+}
+.text_input:hover {
+    background-color: rgb(246, 204, 150);
+}
+
+.input_field {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    opacity: 0.8;
+    color: rgb(117, 23, 23);
+    border-right: 2px transparent rgba(83, 74, 74, 0.659);
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    opacity: 0.8;
+    text-indent: 5px;
+    margin-right: 20px;
+}
+.input_field:hover {
+    background-color: rgb(246, 204, 150);
+}
+
+button {
+    background-color: antiquewhite;
+    color: rgb(117, 23, 23);
+    border: 2px solid rgba(83, 74, 74, 0.659);
+    opacity: 0.8;
+    position: relative;
+    border-radius: 10px;    
+}
+button:hover {
+    background-color: rgb(246, 204, 150);
+}
+
+.result_div {
+    background-color: antiquewhite;
+    color: rgb(117, 23, 23);
+    border-radius: 10px;
+    border: 2px solid rgba(83, 74, 74, 0.659);
+    opacity: 0.8;
+    margin: 20px;
+    position: fixed;
+    top: 57%;margin-right: 30px;
+    padding: 20px
+    
+}
