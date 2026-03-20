@@ -97,14 +97,11 @@ bad_neighbours_dictionary = dict(zip(bad_neighbours_dictionary_keys, bad_neighbo
 good_neighbours_dictionary = {k:[x.capitalize() for x in v] for k, v in good_neighbours_dictionary.items()}
 bad_neighbours_dictionary = {k:[x.capitalize() for x in v] for k, v in bad_neighbours_dictionary.items()}
 
-# print(good_neighbours_dictionary)
-# print("sssssssssssss")
-# print(bad_neighbours_dictionary)
 
 # Exporting the dictionarys into a json file
 
-import json
-
-json.dump(good_neighbours_dictionary, open("good_neighbours.json", "w"))
-json.dump(bad_neighbours_dictionary, open("bad_neighbours.json", "w"))
+with open("good_neighbours.json", "w") as f:
+    json.dump(good_neighbours_dictionary, f)
+with open("bad_neighbours.json", "w") as f:
+    json.dump(bad_neighbours_dictionary, f)
 

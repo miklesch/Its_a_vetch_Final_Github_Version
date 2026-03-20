@@ -1,4 +1,4 @@
-from flask import * #Flask, render_template, send_file, make_response, url_for, Response, redirect, request 
+from flask import Flask, render_template, request 
 import requests
 import json
 
@@ -6,8 +6,10 @@ app = Flask(__name__)
 
 # Getting the data-base of the json files, produced with the "get_data_prdc_dict.py" file
 
-good_neighbours = json.load(open("good_neighbours.json"))
-bad_neighbours = json.load(open("bad_neighbours.json"))
+with open("good_neighbours.json", "r") as f:
+    good_neighbours = json.load(f)
+with open("bad_neighbours.json", "r") as f:
+    bad_neighbours = json.load(f)
 
 # Gathering file from form
 
@@ -41,21 +43,21 @@ def finding_neighbours_function():
                 msg = (f"{x} and {y} are bad neighbours!")
                 messages.append(msg)
                 return False
-            elif (x not in (good_neighbours.keys() or bad_neighbours.keys()) and 
-                y not in (good_neighbours.keys() or bad_neighbours.keys())):
+            elif (x not in good_neighbours.keys() and x not in bad_neighbours.keys() and 
+                y not in good_neighbours.keys() and y not in bad_neighbours.keys()):
                 msg = (f"{x} and {y} are not in the dictionary!")
                 messages.append(msg)
                 return False
-            elif (y not in (good_neighbours.keys() or bad_neighbours.keys())):
+            elif (y not in good_neighbours.keys() and y not in bad_neighbours.keys()):
                 msg = (f"{y} is not in the dictionary!")
                 messages.append(msg)
                 return False
-            elif (x not in (good_neighbours.keys() or bad_neighbours.keys())):
+            elif (x not in good_neighbours.keys() and x not in bad_neighbours.keys()):
                 msg = f"{x} is not in the dictionary!"
                 messages.append(msg)
-                return False, msg
+                return False
             else:
-                return False, ""
+                return False
 
     # Check if all three vegetables are fitting together
 
